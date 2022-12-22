@@ -39,6 +39,6 @@ Esse projeto é um agregador de links para usar como cartão de visitas online.
 
 - [Acesse o projeto finalizado, online](https://maycomwill.github.io/Linktree-like/)
 
-## :memo: Licença
+## :pencil: Licença
 
 Esse projeto está sob a licença MIT.
