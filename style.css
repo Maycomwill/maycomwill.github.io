@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-color: white;
+  --dark_gray: #121214;
+  --bg-url: url("assets/DarkMode.jpg");
+  --stroke-color: rgb(255 255 255 / 0.5);
+  --surface-color: rgb(255 255 255 / 0.1);
+  --surface-color-hover: rgb(255 255 255 / 0.25);
+  --stroke-color-hover: rgb(255 255 255 / 0.8);
+  --highlight-color: rgb(255 255 255 / 0.2);
+  --switch-bg-url: url("./assets/moon-stars.svg");
+
+  --pink_200: #e3a9ff;
+  --pink_500: #ba28ff;
+  --pink_700: #701899;
+
+  --blue_200: #a699f3;
+  --blue_500: #2000e1;
+  --blue_700: #100071;
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url("assets/LightMode.jpg");
+  --switch-bg-url: url("./assets/sun.svg");
+  --stroke-color: rgb(0 0 0 / 0.5);
+  --surface-color: rgb(0 0 0 / 0.05);
+  --surface-color-hover: rgb(0 0 0 / 0.25);
+  --stroke-color-hover: rgb(0 0 0 / 0.8);
+  --highlight-color: rgb(0 0 0 / 0.2);
+}
+
+body a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+header img {
+  width: 10rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--text-color);
+  transition: scale 0.2s ease;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 0.25);
+}
+
+header img:hover {
+  scale: 1.1;
+}
+
+header span {
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.switch {
+  margin: 0.4rem auto;
+  position: relative;
+}
+
+.switch button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 0;
+  border-radius: 50%;
+  background: white var(--switch-bg-url) no-repeat center;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+}
+
+.light .switch button {
+  right: 0;
+  left: initial;
+}
+
+.switch .track {
+  display: block;
+  border-radius: 99.99rem;
+  width: 6.4rem;
+  height: 2.4rem;
+  background: var(--surface-color);
+  border: 0.1rem solid var(--stroke-color);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.linksSection {
+  width: 30%;
+  margin-top: 2.4rem;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.links li {
+  width: 80%;
+  height: 3.6rem;
+  border-radius: 0.8rem;
+  border: 0;
+  background-color: var(--surface-color);
+  border: 0.1rem solid var(--stroke-color);
+  outline: none;
+  color: var(--text-color);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blue(0.4rem);
+  -webkit-backdrop-filter: blue(0.4rem);
+}
+
+.links li:hover {
+  background-color: var(--surface-color-hover);
+  border-color: var(--stroke-color-hover);
+}
+
+.socialIcons {
+  margin-top: 4.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons a {
+  border-radius: 50%;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1.6rem;
+  transition: background-color 0.2s ease;
+}
+
+.socialIcons a:hover {
+  background-color: var(--highlight-color);
+}
+
+.socialIcons a ion-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+footer {
+  margin-top: 4.8rem;
+}
+
+footer span {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 50rem) {
+  .linksSection {
+    width: 75%;
+  }
+  body {
+    width: 100vw;
+    background-color: var(--dark_gray);
+    background-image: var(--bgImg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
