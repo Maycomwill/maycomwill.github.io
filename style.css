@@ -176,6 +176,10 @@ header span {
   border-color: var(--stroke-color-hover);
 }
 
+.links .soon{
+  cursor: not-allowed
+}
+
 .socialIcons {
   margin-top: 4.8rem;
   display: flex;
