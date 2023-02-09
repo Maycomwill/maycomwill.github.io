@@ -1,6 +1,11 @@
 const switchButton = document.querySelector(".switch button")
 const htmlElement = document.documentElement
 
+
+function openNewTab(url) {
+  window.open(url, '_blank')
+}
+
 function toggleTheme() {
 
   // Maneira tradicional
@@ -14,6 +19,4 @@ function toggleTheme() {
   htmlElement.classList.toggle("light")
 }
 
-function openNewTab(url){
-  window.open(url, '_blank')
-}
+
