@@ -13,3 +13,7 @@ function toggleTheme() {
   //Maneira mais moderna
   htmlElement.classList.toggle("light")
 }
+
+function openNewTab(url){
+  window.open(url, '_blank')
+}
