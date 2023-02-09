@@ -152,7 +152,7 @@ header span {
   list-style: none;
 }
 
-.links li {
+.links a {
   width: 80%;
   height: 3.6rem;
   border-radius: 0.8rem;
@@ -171,7 +171,7 @@ header span {
   -webkit-backdrop-filter: blue(0.4rem);
 }
 
-.links li:hover {
+.links a:hover {
   background-color: var(--surface-color-hover);
   border-color: var(--stroke-color-hover);
 }
