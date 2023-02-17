@@ -13,6 +13,7 @@
   --dark_gray: #121214;
   --bg-url: url("assets/DarkMode.jpg");
   --bg-phone: url("assets/Darkmode_phone.jpg");
+  --bg-colorFill: "#121214";
   --stroke-color: rgb(255 255 255 / 0.5);
   --surface-color: rgb(255 255 255 / 0);
   --surface-color-hover: rgb(255 255 255 / 0.05);
@@ -34,6 +35,7 @@
   --text-color: black;
   --bg-url: url("assets/LightMode.jpg");
   --bg-phone: url("assets/Lightmode_phone.jpg");
+  --bg-colorFill: "#F1F1F1"
   --switch-bg-url: url("./assets/sun.svg");
   --stroke-color: rgb(0 0 0 / 0.5);
   --surface-color: rgb(0 0 0 / 0);
@@ -55,6 +57,7 @@ body * {
 body {
   width: 100vw;
   height: 100vh;
+  background-color: var(--bg-colorFill);
   background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,6 +123,7 @@ header span {
 .switch button:hover {
   outline: 0.6rem solid var(--highlight-color);
   backdrop-filter: blur(2.4rem);
+  -webkit-backdrop-filter: blur(2.4rem);
 }
 
 .light .switch button {
